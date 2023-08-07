@@ -17,22 +17,25 @@ function start(){
       message: "Choose an item from the list below:",
       name: "option", 
       choices: [
-        "List All Departments",
-        "Option 2",
-        "Option 3"
+        "View All Departments",
+        "View All Roles",
+        "View All Employees",
+        "Add A Department",
+        "Add A Role",
+        "Add An Employee",
+        "Update Employee Role"
       ]
     }
   ]).then( response => {
     switch(response.option){
-      case "List All Departments":
+      case "View All Departments":
         listAllDepartments().then( ([rows]) => {
           displayAllDepartments(rows);
           start();
         });
-        
+
         break;
-
-
+        
       default:
         start();
     }
