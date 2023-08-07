@@ -28,8 +28,8 @@ inquirer.prompt([
   }
 ]);
 
-/* 
 
-  The code above takes the array of all the student info and makes a new array for inquirer; 
-  for each student we display their name, and we also provide an id value. When the student 
-  chooses by name, the id value is what gets put into the response object.
+
+  // The code above takes the array of all the student info and makes a new array for inquirer; 
+  // for each student we display their name, and we also provide an id value. When the student 
+  // chooses by name, the id value is what gets put into the response object
