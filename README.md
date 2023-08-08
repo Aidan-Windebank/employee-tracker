@@ -18,4 +18,4 @@ The following is an employee tracking content management system (CMS) that is bu
 [Click Here to View GitHub Repo](https://github.com/Aidan-Windebank/employee-tracker)
 
 ## Link to Screencast Video to See Application in Use
-[Click Here to View Video]()
+[Click Here to View Video](https://drive.google.com/file/d/1NP1BDkCGm5SsnyyjduInSxksP2AAp2ZV/view)
