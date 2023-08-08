@@ -30,3 +30,4 @@ VALUES
     ('John', 'Doe', 6, 5),
     ('Sarah', 'Finch', 7, null),
     ('Ashley', 'Baker', 8, 7);
+    

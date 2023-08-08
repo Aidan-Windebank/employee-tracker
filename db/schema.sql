@@ -35,6 +35,8 @@ CREATE TABLE employee (
 
 
 
+-- delete all below before submit
+
 USE employees;
 
 INSERT INTO department (name)

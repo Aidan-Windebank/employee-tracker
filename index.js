@@ -24,9 +24,9 @@ function start(){
         "View All Departments",
         "View All Roles",
         "View All Employees",
-        "Add A Department",
-        "Add A Role",
-        "Add An Employee",
+        "Add a Department",
+        "Add a Role",
+        "Add an Employee",
         "Update Employee Role"
       ]
     }
@@ -56,6 +56,67 @@ function start(){
   
         break;
         
+      case "Add a Department":
+        inquirer
+          .prompt([
+            {
+              type: 'input',
+              name: 'new_department',
+              message: 'What is the name of the department'
+            }
+          ])
+          .then((answer) => {
+            const newDepartment = (answer['new_department'])
+            
+            function addNewDepartment(){
+              return connection.promise().query(`INSERT INTO department (name) VALUES ("${newDepartment}");`);
+            }
+            addNewDepartment();
+            console.log(`Added ${newDepartment} to the Database`)
+          
+          start();
+          })
+
+        break;
+
+        case "Add a Role":
+          inquirer
+            .prompt([
+              {
+                type: 'input',
+                name: 'new_role',
+                message: 'What is the name of the role'
+              },
+              {
+                type: 'input',
+                name: 'new_salary',
+                message: 'What is the salary of the role'
+              },
+              // {
+              //   type: 'list',
+              //   name: 'new_role_department',
+              //   message: 'Which department does the role belong to',
+              //   choices: []
+              // }
+            ])
+            .then((answer) => {
+              const newRole = (answer['new_role'])
+              const newSalary = (answer['new_salary'])
+              
+              function addNewRole(){
+                return connection.promise().query(`INSERT INTO role (title, salary) VALUES ("${newRole}", "${newSalary}");`);
+              }
+              addNewRole();
+              console.log(`Added ${newRole} to the Database`)
+            
+            start();
+            })
+  
+          break;
+
+
+
+
       default:
         start();
     }
